@@ -33,11 +33,8 @@ public class DiceTest {
 		int[] num = {0,0,0,0,0,0};
 		for (int i = 0; i < rolls; i++) {
 			Dice dice = new Dice();
-			int val = dice.roll();
-			assertTrue(val >= 1 && val <= 6);
-			num[val-1]++;
+			num[dice.roll()-1]++;
 		}
-		System.out.println(Arrays.toString(num));
 		for (int i = 0; i < num.length; i++) {
 			assertTrue(i+" = " + num[i], (num[i] <= 10400 && num[i] >= 9600));
 		}
