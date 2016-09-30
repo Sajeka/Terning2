@@ -4,9 +4,15 @@ import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
+
 public class DiceTest {
 
 
+	/**
+	 * Test if the d6 rolls 1-6.
+	 *
+	 * @throws Exception
+	 */
 	@Test
 	public void testRoll1To6() throws Exception {
 		for (int i = 0; i < 100000; i++) {
@@ -16,6 +22,11 @@ public class DiceTest {
 		}
 	}
 
+	/**
+	 * Test if the occurrences of 1-6 on the d6 is truly random
+	 *
+	 * @throws Exception
+	 */
 	@Test
 	public void testRollOccurrences() throws Exception {
 		int rolls = 60000;
@@ -26,6 +37,7 @@ public class DiceTest {
 			assertTrue(val >= 1 && val <= 6);
 			num[val-1]++;
 		}
+		System.out.println(Arrays.toString(num));
 		for (int i = 0; i < num.length; i++) {
 			assertTrue(i+" = " + num[i], (num[i] <= 10400 && num[i] >= 9600));
 		}
