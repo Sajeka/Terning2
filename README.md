@@ -10,5 +10,6 @@ Carl-Emil
 
 Magnus
 s152695
-Jonathan
 
+Jonathan
+s136381
