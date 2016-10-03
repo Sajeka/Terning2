@@ -5,3 +5,4 @@ Terning klasse til sekssidet terning. Terning objekter kan kaldes for at returne
 
 ###UseDice.java
 Commandline program der lader brugere slå med en terning.
+
